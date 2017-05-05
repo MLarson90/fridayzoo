@@ -23,7 +23,7 @@ export class AllAnimalsComponent  {
   caretake(inputed){
     var careTakers = 0;
     for(var i = 0; i<inputed.length; i++){
-      careTakers += inputed[i].caretakers;
+      careTakers += parseInt(inputed[i].caretakers);
     }
     return careTakers;
   }

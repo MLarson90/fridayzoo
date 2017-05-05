@@ -1,0 +1,14 @@
+#tiger{
+  position: relative;
+  width:70%;
+  margin-left: 16%
+}
+#title{
+  background-color: #39931D;
+  padding:10px 40px;
+  border-top: 4px solid #4DB02F;
+  border-bottom: 4px solid #4DB02F;
+  color: white;
+  text-shadow: -2px 2px 2px black;
+
+}
