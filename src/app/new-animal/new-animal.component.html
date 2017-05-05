@@ -1,3 +1,17 @@
-<p>
-  new-animal works!
-</p>
+<div class="row">
+  <div class ="col-md-4">
+  <h3>Add new animal</h3>
+  <form>
+    <input class="form-control" #newSpecies placeholder="Species" required>
+    <input class="form-control" #newName placeholder="Name" required>
+    <input class="form-control" #newAge placeholder="Age" required>
+    <input class="form-control" #newDiet placeholder="Diet" required>
+    <input class="form-control" #newLoc placeholder="Location" required>
+    <input class="form-control" #newCare placeholder="Amount of care takers" required>
+    <input class="form-control" #newSex placeholder="Gender" required>
+    <input class="form-control" #newLikes placeholder="Likes" required>
+    <input class="form-control" #newDis placeholder="Dislikes" required>
+  <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLoc.value, newCare.value, newSex.value, newLikes.value, newDis.value)">Add Beer</button>
+  </form>
+</div>
+</div>
