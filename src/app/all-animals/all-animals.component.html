@@ -1,0 +1,40 @@
+
+<div class="container">
+  <select (change)="onChange($event.target.value)">
+     <option value="allAnimals">Location Filter</option>
+     <option value="trail">Northern Trail</option>
+     <option value="Aquarium">Tropical Forrest</option>
+     <option value="Rain">Aquarium</option>
+   </select>
+   <select (change)="otherChange($event.target.value)">
+      <option value="allAnimals">Age Filter</option>
+      <option value="young">Young(< 3)</option>
+      <option value="old">Old(> 50)</option>
+    </select>
+  <div *ngFor="let animal of childAnimalList | ageFilter: filterByAge | locFilter: filterByLoc">
+    <div class="col-md-4">
+      <h1 (click)="animal.editName=!animal.editName">
+      {{animal.name}}
+      <input *ngIf="animal.editName" [(ngModel)]="animal.name" placeholder="animal.name">
+      </h1>
+      <ul>
+        <li (click)="animal.editSpecies=!animal.editSpecies">Species: {{animal.species}}</li>
+        <input *ngIf="animal.editSpecies" [(ngModel)]="animal.species" placeholder="animal.species">
+        <li (click)="animal.editAge=!animal.editAge"> Age: {{animal.age}}</li>
+        <input *ngIf="animal.editAge" [(ngModel)]="animal.age" placeholder="animal.age">
+        <li (click)="animal.editDiet=!animal.editDiet">Diet: {{animal.diet}}</li>
+        <input *ngIf="animal.editDiet" [(ngModel)]="animal.diet" placeholder="animal.diet">
+        <li (click)="animal.editLoc=!animal.editLoc">Location: {{animal.zooLocation}}</li>
+        <input *ngIf="animal.editLoc" [(ngModel)]="animal.zooLocation" placeholder="animal.zooLocation">
+        <li (click)="animal.editCareTakers=!animal.editCareTakers">Care Takers Needed: {{animal.caretakers}}</li>
+        <input *ngIf="animal.editCareTakers" [(ngModel)]="animal.caretakers" placeholder="animal.caretakers" >
+        <li (click)="animal.editSex=!animal.editSex">Gender: {{animal.sex}}</li>
+        <input *ngIf="animal.editSex" [(ngModel)]="animal.sex" placeholder="animal.sex">
+        <li (click)="animal.editLike=!animal.editLike">Likes: {{animal.likes}}</li>
+        <input *ngIf="animal.editLike" [(ngModel)]="animal.likes" placeholder="animal.animal.likes">
+        <li (click)="animal.editDis=!animal.editDis">Dislikes: {{animal.dislikes}}</li>
+        <input *ngIf="animal.editDis" [(ngModel)]="animal.dislikes" placeholder="animal.dislikes">
+      </ul>
+    </div>
+  </div>
+</div>

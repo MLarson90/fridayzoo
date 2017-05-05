@@ -1,0 +1,17 @@
+{
+  "name": "zoo",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Max Larson <mr.m.larson90@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
