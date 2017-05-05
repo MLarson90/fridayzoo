@@ -1,5 +1,5 @@
 
-<div class="container">
+
   <select (change)="onChange($event.target.value)">
      <option value="allAnimals">Location Filter</option>
      <option value="trail">Northern Trail</option>
@@ -11,7 +11,13 @@
       <option value="young">Young(< 3)</option>
       <option value="old">Old(> 50)</option>
     </select>
-  <div *ngFor="let animal of childAnimalList | ageFilter:filterByAge | locFilter:filterByLoc">
+    <select (change)="otherChanger($event.target.value)">
+       <option value="allAnimals">New Filter</option>
+       <option value="newly">Newly Added</option>
+     </select>
+      <h4>Total Care Takers Needed: {{caretake(childAnimalList)}}</h4>
+     <h4> Care Takers Needed By Filter: {{caretake(childAnimalList | ageFilter:filterByAge | locFilter:filterByLoc | newFilter:filterByNew)}}</h4>
+  <div *ngFor="let animal of childAnimalList | ageFilter:filterByAge | locFilter:filterByLoc | newFilter:filterByNew">
     <div class="col-md-4">
       <h1 (click)="animal.editName=!animal.editName">
       {{animal.name}}
@@ -37,4 +43,3 @@
       </ul>
     </div>
   </div>
-</div>

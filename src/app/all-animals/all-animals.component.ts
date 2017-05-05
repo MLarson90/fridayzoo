@@ -16,4 +16,15 @@ export class AllAnimalsComponent  {
   onChange(optionFromMenu){
     this.filterByLoc = optionFromMenu;
   }
+  filterByNew: string = "allAnimals";
+  otherChanger(optionFromMenu){
+    this.filterByNew = optionFromMenu;
+  }
+  caretake(inputed){
+    var careTakers = 0;
+    for(var i = 0; i<inputed.length; i++){
+      careTakers += inputed[i].caretakers;
+    }
+    return careTakers;
+  }
 }

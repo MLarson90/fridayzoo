@@ -2,6 +2,7 @@
   {{title}}
 </h1>
 <h4>Click any characteristic of an animal to edit it</h4>
-
+<div class="container">
+<app-new-animal (newAnimalSender)="addAnimal($event)"></app-new-animal>
 <app-all-animals [childAnimalList]="animals"></app-all-animals>
-<app-new-animal></app-new-animal>
+</div>

@@ -19,6 +19,8 @@ export class AppComponent {
   new Animal('Plains Lepord Frog', 'Lare', 4, 'Herbivore', 'Aquarium', 1, 'Male', 'Cheese', 'Frog Legs'),
   new Animal('Dwarf Caiman', 'Sally', 20, 'Carnivore', 'Aquarium', 4, 'Female', 'Soccer', 'Brushing her teeth')
 ];
-
+  addAnimal(newAnimal: Animal){
+    this.animals.push(newAnimal);
+  }
 
 }

@@ -8,6 +8,7 @@ import { AllAnimalsComponent } from './all-animals/all-animals.component';
 import { NewAnimalComponent } from './new-animal/new-animal.component';
 import { AgeFilterPipe } from './age-filter.pipe';
 import { LocFilterPipe } from './loc-filter.pipe';
+import { NewFilterPipe } from './new-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LocFilterPipe } from './loc-filter.pipe';
     AllAnimalsComponent,
     NewAnimalComponent,
     AgeFilterPipe,
-    LocFilterPipe
+    LocFilterPipe,
+    NewFilterPipe
   ],
   imports: [
     BrowserModule,
