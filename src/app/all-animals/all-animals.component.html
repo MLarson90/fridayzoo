@@ -19,9 +19,8 @@
      <h4> Care Takers Needed By Filter: {{caretake(childAnimalList | ageFilter:filterByAge | locFilter:filterByLoc | newFilter:filterByNew)}}</h4>
   <div *ngFor="let animal of childAnimalList | ageFilter:filterByAge | locFilter:filterByLoc | newFilter:filterByNew">
     <div class="col-md-4">
-      <h1 class="jerry" (click)="animal.editName=!animal.editName">
+      <h1 class="jerry">
       {{animal.name}}
-      <input *ngIf="animal.editName" [(ngModel)]="animal.name" placeholder="animal.name">
       </h1>
       <ul>
         <li (click)="animal.editSpecies=!animal.editSpecies">Species: {{animal.species}}</li>
