@@ -13,7 +13,7 @@ export class AllAnimalsComponent  {
     this.filterByAge = optionFromMenu;
   }
   filterByLoc: string = "allAnimals";
-  change(optionFromMenu){
+  onChange(optionFromMenu){
     this.filterByLoc = optionFromMenu;
   }
 }

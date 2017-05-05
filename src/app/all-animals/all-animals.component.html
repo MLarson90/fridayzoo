@@ -11,7 +11,7 @@
       <option value="young">Young(< 3)</option>
       <option value="old">Old(> 50)</option>
     </select>
-  <div *ngFor="let animal of childAnimalList | ageFilter: filterByAge | locFilter: filterByLoc">
+  <div *ngFor="let animal of childAnimalList | ageFilter:filterByAge | locFilter:filterByLoc">
     <div class="col-md-4">
       <h1 (click)="animal.editName=!animal.editName">
       {{animal.name}}

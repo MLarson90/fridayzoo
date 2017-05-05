@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Animal } from 'app/animal.model';
 @Pipe({
-  name: 'locFilter'
+  name: 'locFilter',
+  pure: false
 })
 export class LocFilterPipe implements PipeTransform {
 
